@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="algunoDataSet" targetNamespace="http://tempuri.org/algunoDataSet.xsd" xmlns:mstns="http://tempuri.org/algunoDataSet.xsd" xmlns="http://tempuri.org/algunoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="algunoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="algunoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.algunoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="algunoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="algunoDataSet" msprop:Generator_UserDSName="algunoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_UserTableName="persona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_RowEvArgName="personaRowChangeEvent" msprop:Generator_RowClassName="personaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="dni" msprop:Generator_ColumnVarNameInTable="columndni" msprop:Generator_ColumnPropNameInRow="dni" msprop:Generator_ColumnPropNameInTable="dniColumn" msprop:Generator_UserColumnName="dni" type="xs:string" minOccurs="0" />
+              <xs:element name="localidad" msprop:Generator_ColumnVarNameInTable="columnlocalidad" msprop:Generator_ColumnPropNameInRow="localidad" msprop:Generator_ColumnPropNameInTable="localidadColumn" msprop:Generator_UserColumnName="localidad" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="localidad" msprop:Generator_TableClassName="localidadDataTable" msprop:Generator_TableVarName="tablelocalidad" msprop:Generator_TablePropName="localidad" msprop:Generator_RowDeletingName="localidadRowDeleting" msprop:Generator_RowChangingName="localidadRowChanging" msprop:Generator_RowEvHandlerName="localidadRowChangeEventHandler" msprop:Generator_RowDeletedName="localidadRowDeleted" msprop:Generator_UserTableName="localidad" msprop:Generator_RowChangedName="localidadRowChanged" msprop:Generator_RowEvArgName="localidadRowChangeEvent" msprop:Generator_RowClassName="localidadRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idLocalidad" msprop:Generator_ColumnVarNameInTable="columnidLocalidad" msprop:Generator_ColumnPropNameInRow="idLocalidad" msprop:Generator_ColumnPropNameInTable="idLocalidadColumn" msprop:Generator_UserColumnName="idLocalidad" type="xs:string" />
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="personaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:persona" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="localidadKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:localidad" />
+      <xs:field xpath="mstns:idLocalidad" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="localidad_persona" msdata:parent="localidad" msdata:child="persona" msdata:parentkey="idLocalidad" msdata:childkey="localidad" msprop:Generator_UserChildTable="persona" msprop:Generator_ChildPropName="GetpersonaRows" msprop:Generator_UserRelationName="localidad_persona" msprop:Generator_RelationVarName="relationlocalidad_persona" msprop:Generator_UserParentTable="localidad" msprop:Generator_ParentPropName="localidadRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
